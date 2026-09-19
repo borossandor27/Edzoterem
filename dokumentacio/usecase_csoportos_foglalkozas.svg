@@ -1,0 +1,62 @@
+<svg width="800" height="590" viewBox="0 0 800 590" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Use case diagram – Csoportos foglalkozás meghirdetése és jóváhagyása</title>
+<desc>Az edző meghirdethet egy csoportos foglalkozást, amihez meg kell adnia a foglalkozás adatait; a meghirdetést a tulajdonos hagyja jóvá.</desc>
+<defs>
+  <marker id="openArrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+    <path d="M1,1 L9,5 L1,9" fill="none" stroke="black" stroke-width="1.2"/>
+  </marker>
+</defs>
+
+<text x="400" y="26" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="black">Use case diagram – Csoportos foglalkozás meghirdetése és jóváhagyása</text>
+
+<rect x="200" y="55" width="560" height="470" rx="6" fill="none" stroke="black" stroke-width="1.5"/>
+<text x="215" y="78" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="black">Edzésórák nyilvántartása</text>
+
+<g stroke="black" stroke-width="1.5" fill="none">
+  <circle cx="80" cy="122" r="12" fill="white"/>
+  <line x1="80" y1="134" x2="80" y2="170"/>
+  <line x1="62" y1="145" x2="98" y2="145"/>
+  <line x1="80" y1="170" x2="62" y2="200"/>
+  <line x1="80" y1="170" x2="98" y2="200"/>
+</g>
+<text x="80" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="black">Edző</text>
+
+<g stroke="black" stroke-width="1.5" fill="none">
+  <circle cx="80" cy="352" r="12" fill="white"/>
+  <line x1="80" y1="364" x2="80" y2="400"/>
+  <line x1="62" y1="375" x2="98" y2="375"/>
+  <line x1="80" y1="400" x2="62" y2="430"/>
+  <line x1="80" y1="400" x2="98" y2="430"/>
+</g>
+<text x="80" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="black">Tulajdonos</text>
+
+<line x1="98" y1="145" x2="233" y2="245" stroke="black" stroke-width="1.2"/>
+<line x1="98" y1="375" x2="512" y2="383" stroke="black" stroke-width="1.2"/>
+
+<ellipse cx="340" cy="260" rx="110" ry="50" fill="white" stroke="black" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="black">
+  <tspan x="340" y="255">Csoportos foglalkozás</tspan>
+  <tspan x="340" y="273">meghirdetése</tspan>
+</text>
+
+<ellipse cx="620" cy="140" rx="110" ry="48" fill="white" stroke="black" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="black">
+  <tspan x="620" y="135">Foglalkozás adatainak</tspan>
+  <tspan x="620" y="153">megadása</tspan>
+</text>
+
+<ellipse cx="620" cy="400" rx="115" ry="50" fill="white" stroke="black" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="black">
+  <tspan x="620" y="395">Csoportos foglalkozás</tspan>
+  <tspan x="620" y="413">jóváhagyása</tspan>
+</text>
+<text x="620" y="462" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="black">extension point: meghirdetés után, jóváhagyásra vár</text>
+
+<path d="M425,230 L540,170" stroke="black" stroke-width="1.2" stroke-dasharray="5,4" fill="none" marker-end="url(#openArrow2)"/>
+<text x="482" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="black">«include»</text>
+
+<path d="M545,362 L410,298" stroke="black" stroke-width="1.2" stroke-dasharray="5,4" fill="none" marker-end="url(#openArrow2)"/>
+<text x="477" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="black">«extend»</text>
+
+<text x="400" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="black">«include» = a meghirdetés része, mindig lefut · «extend» = a jóváhagyás feltételesen bővíti a meghirdetést</text>
+</svg>
