@@ -1,0 +1,45 @@
+<Window x:Class="Edzoterem.Desktop.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:Edzoterem.Desktop.ViewModels"
+        xmlns:views="clr-namespace:Edzoterem.Desktop.Views"
+        Title="Edzőterem – Nyilvántartó rendszer" Height="650" Width="1000"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vm:DolgozokListViewModel}">
+            <views:DolgozokListView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:TagokListViewModel}">
+            <views:TagokListView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:BerletekViewModel}">
+            <views:BerletekView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:CsoportosFoglalkozasokViewModel}">
+            <views:CsoportosFoglalkozasokView/>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Background="#F1EFE8">
+            <TextBlock Text="{Binding Session.Nev}" FontWeight="Bold" Margin="12,16,12,4"/>
+            <TextBlock Text="{Binding Session.Szerepkor}" Foreground="Gray" Margin="12,0,12,16"/>
+
+            <Button Content="Dolgozók" Margin="8,4" Padding="8,6"
+                    Command="{Binding MutasdDolgozokatCommand}"
+                    Visibility="{Binding Session.Tulajdonos, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <Button Content="Tagok" Margin="8,4" Padding="8,6" Command="{Binding MutasdTagokatCommand}"/>
+            <Button Content="Bérletek" Margin="8,4" Padding="8,6" Command="{Binding MutasdBerleteketCommand}"/>
+            <Button Content="Csoportos foglalkozások" Margin="8,4" Padding="8,6" Command="{Binding MutasdCsoportosFoglalkozasokatCommand}"/>
+
+            <Button Content="Kijelentkezés" Margin="8,32,8,4" Padding="8,6" Command="{Binding KijelentkezesCommand}"/>
+        </StackPanel>
+
+        <ContentControl Grid.Column="1" Content="{Binding CurrentViewModel}" Margin="16"/>
+    </Grid>
+</Window>

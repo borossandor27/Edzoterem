@@ -1,0 +1,80 @@
+<UserControl x:Class="Edzoterem.Desktop.Views.TagokListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Tagok" FontSize="20" FontWeight="Bold" Margin="0,0,0,12"/>
+
+        <Border Grid.Row="1" BorderBrush="#D3D1C7" BorderThickness="1" Padding="12" Margin="0,0,0,12">
+            <StackPanel>
+                <TextBlock Text="Új tag regisztrálása" FontWeight="Bold" Margin="0,0,0,8"/>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Width="140" Margin="0,0,8,0">
+                        <TextBlock Text="Vezetéknév"/>
+                        <TextBox Text="{Binding UjVezeteknev, UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                    <StackPanel Width="140" Margin="0,0,8,0">
+                        <TextBlock Text="Keresztnév"/>
+                        <TextBox Text="{Binding UjKeresztnev, UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                    <StackPanel Width="160" Margin="0,0,8,0">
+                        <TextBlock Text="E-mail"/>
+                        <TextBox Text="{Binding UjEmail, UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                    <StackPanel Width="120" Margin="0,0,8,0">
+                        <TextBlock Text="Telefon"/>
+                        <TextBox Text="{Binding UjTelefon, UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                    <StackPanel Width="90" Margin="0,0,8,0">
+                        <TextBlock Text="Nem"/>
+                        <ComboBox ItemsSource="{Binding NemOpciok}" SelectedItem="{Binding UjNem}"/>
+                    </StackPanel>
+                    <StackPanel Width="120" Margin="0,0,8,0">
+                        <TextBlock Text="Születési dátum"/>
+                        <DatePicker SelectedDate="{Binding UjSzuletesiDatum}"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                    <StackPanel Width="200" Margin="0,0,8,0">
+                        <TextBlock Text="Vészhelyzeti kapcsolattartó neve"/>
+                        <TextBox Text="{Binding UjVhKapcsolattartoNev, UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                    <StackPanel Width="150" Margin="0,0,8,0">
+                        <TextBlock Text="Kapcsolattartó telefon"/>
+                        <TextBox Text="{Binding UjVhKapcsolattartoTelefon, UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                    <Button Content="Regisztrálás" VerticalAlignment="Bottom" Padding="8,4"
+                            Command="{Binding RegisztracioCommand}"/>
+                </StackPanel>
+                <TextBlock Text="{Binding SikerUzenet}" Foreground="Green" TextWrapping="Wrap" Margin="0,8,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <DataGrid Grid.Row="2" ItemsSource="{Binding Tagok}" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Vezetéknév" Binding="{Binding Vezeteknev}"/>
+                <DataGridTextColumn Header="Keresztnév" Binding="{Binding Keresztnev}"/>
+                <DataGridTextColumn Header="E-mail" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Regisztráció" Binding="{Binding RegisztracioDatuma}"/>
+                <DataGridTextColumn Header="Aktív" Binding="{Binding Aktiv}"/>
+                <DataGridTemplateColumn Header="Művelet">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Inaktiválás" Padding="6,2"
+                                    Command="{Binding DataContext.InaktivalasCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                    CommandParameter="{Binding Id}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBlock Grid.Row="3" Foreground="Red" Text="{Binding HibaUzenet}" TextWrapping="Wrap"/>
+    </Grid>
+</UserControl>

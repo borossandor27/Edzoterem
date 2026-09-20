@@ -1,0 +1,51 @@
+<svg width="900" height="650" viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Use case diagram – Dolgozók kezelése</title>
+<desc>A tulajdonos veheti fel, módosíthatja és léptetheti ki a dolgozókat, valamint ő állítja össze a munkaidő-beosztást a nyitvatartási idő figyelembevételével.</desc>
+<defs>
+  <marker id="openArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+    <path d="M1,1 L9,5 L1,9" fill="none" stroke="black" stroke-width="1.2"/>
+  </marker>
+</defs>
+
+<text x="450" y="26" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="black">Use case diagram – Dolgozók kezelése</text>
+
+<rect x="200" y="55" width="610" height="520" rx="6" fill="none" stroke="black" stroke-width="1.5"/>
+<text x="215" y="78" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="black">Dolgozók nyilvántartása és beosztása</text>
+
+<g stroke="black" stroke-width="1.5" fill="none">
+  <circle cx="90" cy="290" r="12" fill="white"/>
+  <line x1="90" y1="302" x2="90" y2="338"/>
+  <line x1="72" y1="313" x2="108" y2="313"/>
+  <line x1="90" y1="338" x2="72" y2="368"/>
+  <line x1="90" y1="338" x2="108" y2="368"/>
+</g>
+<text x="90" y="386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="black">Tulajdonos</text>
+
+<line x1="108" y1="313" x2="225" y2="110" stroke="black" stroke-width="1.2"/>
+<line x1="108" y1="313" x2="225" y2="230" stroke="black" stroke-width="1.2"/>
+<line x1="108" y1="313" x2="225" y2="350" stroke="black" stroke-width="1.2"/>
+<line x1="108" y1="313" x2="225" y2="470" stroke="black" stroke-width="1.2"/>
+
+<ellipse cx="370" cy="110" rx="145" ry="42" fill="white" stroke="black" stroke-width="1.5"/>
+<text x="370" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="black">Dolgozó felvétele</text>
+
+<ellipse cx="370" cy="230" rx="145" ry="42" fill="white" stroke="black" stroke-width="1.5"/>
+<text x="370" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="black">Dolgozó adatainak módosítása</text>
+
+<ellipse cx="370" cy="350" rx="145" ry="42" fill="white" stroke="black" stroke-width="1.5"/>
+<text x="370" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="black">Dolgozó kiléptetése</text>
+
+<ellipse cx="370" cy="470" rx="145" ry="42" fill="white" stroke="black" stroke-width="1.5"/>
+<text x="370" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="black">Munkaidő-beosztás összeállítása</text>
+
+<ellipse cx="680" cy="470" rx="110" ry="42" fill="white" stroke="black" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="black">
+  <tspan x="680" y="465">Nyitvatartási idő</tspan>
+  <tspan x="680" y="483">figyelembevétele</tspan>
+</text>
+
+<path d="M500,455 L575,458" stroke="black" stroke-width="1.2" stroke-dasharray="5,4" fill="none" marker-end="url(#openArrow)"/>
+<text x="537" y="443" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="black">«include»</text>
+
+<text x="450" y="615" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="black">Minden dolgozói művelet kizárólag a tulajdonos jogosultsága, asztali alkalmazásban</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg width="800" height="460" viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Use case diagram – Tagok kezelése (regisztráción túl)</title>
+<desc>A tag adatait a tulajdonos vagy az edző módosíthatja, a tagságot azonban csak a tulajdonos szüntetheti meg (inaktiválhatja).</desc>
+<defs>
+  <marker id="openArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+    <path d="M1,1 L9,5 L1,9" fill="none" stroke="black" stroke-width="1.2"/>
+  </marker>
+</defs>
+
+<text x="400" y="26" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="black">Use case diagram – Tagok kezelése (regisztráción túl)</text>
+
+<rect x="200" y="55" width="500" height="340" rx="6" fill="none" stroke="black" stroke-width="1.5"/>
+<text x="215" y="78" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="black">Tagok nyilvántartása</text>
+
+<g stroke="black" stroke-width="1.5" fill="none">
+  <circle cx="90" cy="102" r="12" fill="white"/>
+  <line x1="90" y1="114" x2="90" y2="150"/>
+  <line x1="72" y1="125" x2="108" y2="125"/>
+  <line x1="90" y1="150" x2="72" y2="180"/>
+  <line x1="90" y1="150" x2="108" y2="180"/>
+</g>
+<text x="90" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="black">Tulajdonos</text>
+
+<g stroke="black" stroke-width="1.5" fill="none">
+  <circle cx="90" cy="242" r="12" fill="white"/>
+  <line x1="90" y1="254" x2="90" y2="290"/>
+  <line x1="72" y1="265" x2="108" y2="265"/>
+  <line x1="90" y1="290" x2="72" y2="320"/>
+  <line x1="90" y1="290" x2="108" y2="320"/>
+</g>
+<text x="90" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="black">Edző</text>
+
+<line x1="108" y1="125" x2="240" y2="140" stroke="black" stroke-width="1.2"/>
+<line x1="108" y1="125" x2="250" y2="280" stroke="black" stroke-width="1.2"/>
+<line x1="108" y1="265" x2="238" y2="158" stroke="black" stroke-width="1.2"/>
+
+<ellipse cx="380" cy="140" rx="140" ry="44" fill="white" stroke="black" stroke-width="1.5"/>
+<text x="380" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="black">Tag adatainak módosítása</text>
+
+<ellipse cx="380" cy="280" rx="130" ry="44" fill="white" stroke="black" stroke-width="1.5"/>
+<text x="380" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="black">Tagság inaktiválása</text>
+
+<text x="400" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="black">Tagság inaktiválására kizárólag a tulajdonos jogosult, asztali alkalmazásban</text>
+</svg>
