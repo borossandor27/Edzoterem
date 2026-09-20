@@ -1,0 +1,7 @@
+Felhasználónév	Jelszó
+tulajdonos	Jelszo123!
+recepcio	Jelszo123!
+szabo.bence	Jelszo123!
+toth.anna	Jelszo123!
+kiss.marton	Ideiglenes123!
+varga.lena	Ideiglenes123!

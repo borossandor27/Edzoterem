@@ -1,0 +1,26 @@
+export class ApiError extends Error {
+  constructor(message, status = 400) {
+    super(message);
+    this.status = status;
+  }
+
+  static notFound(message) {
+    return new ApiError(message, 404);
+  }
+
+  static conflict(message) {
+    return new ApiError(message, 409);
+  }
+
+  static badRequest(message) {
+    return new ApiError(message, 400);
+  }
+
+  static forbidden(message) {
+    return new ApiError(message, 403);
+  }
+
+  static unauthorized(message) {
+    return new ApiError(message, 401);
+  }
+}

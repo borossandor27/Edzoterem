@@ -1,4 +1,4 @@
-# .NET (backend, asztali)
+# .NET (asztali)
 bin/
 obj/
 *.user
@@ -6,16 +6,14 @@ obj/
 *.dbmdl
 *.dmp
 
-# EF Core local tool manifest cache
-backend/dotnet-tools.json.lock
-
-# Node / React (frontend)
+# Node (backend, frontend)
 node_modules/
 dist/
 dist-ssr/
 *.local
 .env.local
 .env.*.local
+backend/.env
 
 # Editor/OS
 .idea/
